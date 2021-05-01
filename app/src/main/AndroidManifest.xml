@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KelasAsqlite">
-        <activity android:name=".TemanBaru"></activity>
+        <activity android:name=".LihatDataTeman"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".TemanEdit"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TemanBaru"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

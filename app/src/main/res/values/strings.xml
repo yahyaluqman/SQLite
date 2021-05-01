@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">KelasAsqlite</string>
+    <string name="adddata">Data Teman Baru</string>
+    <string name="lihatdata">Lihat Data Teman</string>
+    <string name="nama">Nama Teman</string>
+    <string name="notel">Nomor Telepon Teman</string>
+    <string name="editdata">Edit Data Teman</string>
+    <string name="hapusdata">Hapus Data Teman</string>
 </resources>
