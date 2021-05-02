@@ -45,7 +45,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
 
     @Override
     public void onBindViewHolder(@NonNull TemanViewHolder holder, int position) {
-        String nm,tlp,id;
+        String id,nm,tlp;
         DBController db = new DBController(context);
 
         id = listData.get(position).getId();
@@ -77,19 +77,19 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
                                 final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                                 builder.setMessage("Apakah Anda Yakin Untuk Menghapus Data " + nm + "?");
                                 builder.setCancelable(true);
-                                builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                                builder.setNegativeButton("Tidak!", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.cancel();
                                     }
                                 });
-                                builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                                builder.setPositiveButton("Ya!", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         HashMap<String,String> qvalues =  new HashMap<>();
                                         qvalues.put("id", id);
                                         db.deleteData(qvalues);
-                                        Toast.makeText(context, "Data Berhasil Dihapus", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context, "Data Teman Berhasil Dihapus !", Toast.LENGTH_SHORT).show();
                                         Intent in = new Intent(context, MainActivity.class);
                                         context.startActivity(in);
                                     }

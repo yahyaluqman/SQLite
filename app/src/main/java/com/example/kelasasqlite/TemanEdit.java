@@ -26,7 +26,7 @@ public class TemanEdit extends AppCompatActivity {
 
         tNama = (TextInputEditText)findViewById(R.id.tiNama);
         tTelpon = (TextInputEditText)findViewById(R.id.tiTelpon);
-        simpanBtn = (Button)findViewById(R.id.butSave);
+        simpanBtn = (Button)findViewById(R.id.bSave);
 
         id = getIntent().getStringExtra("id");
         nm = getIntent().getStringExtra("nama");
@@ -40,7 +40,7 @@ public class TemanEdit extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(tNama.getText().toString().equals("")||tTelpon.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(),"Data belum lengkap !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Data belum komplit !", Toast.LENGTH_SHORT).show();
                 }else {
                     nm = tNama.getText().toString();
                     tlp = tTelpon.getText().toString();
@@ -60,5 +60,6 @@ public class TemanEdit extends AppCompatActivity {
     public void callHome1(){
         Intent intent = new Intent(TemanEdit.this,MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }
